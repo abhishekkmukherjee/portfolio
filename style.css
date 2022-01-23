@@ -1,0 +1,81 @@
+body{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-family: 'Merriweather', serif;
+   background-color:  #1A1A40;
+   color: whitesmoke;
+}
+.top{
+    background: color #e4f9f5;
+    position: relative;
+}
+.middle-container{
+ 
+
+}
+.bottom-container{
+  
+}
+.bottom_cloud{
+    position: absolute;
+    left: 300px;
+    bottom: 300px;
+
+}
+.top_cloud{
+ position: absolute;
+right: 300px;
+top: 50px;
+}
+h1{
+    margin-top: 0px;
+    font-family: 'Sacramento', cursive;
+}
+h2{
+    font-family: 'Montserrat', sans-serif
+}
+h3{
+    font-family: 'Montserrat', sans-serif
+}
+.ppic{
+    width: 20%;
+   border: 5px solid rgb(142, 250, 1);
+   border-radius: 169px;
+}
+.gifc{
+    border: 2px solid yellow;
+    border-radius: 74px;
+}
+.hlo{
+
+    border: 2px solid yellow;
+    border-radius: 36px;
+}
+.tmkoc{
+    border: 2px solid yellow;
+    border-radius: 32px;
+}
+.cntct{
+    border: 2px solid yellow;
+    border-radius: 32px;
+}
+.btn1{
+    color: black;
+    background-color: chocolate;
+}
+.ml{
+    color: yellow;
+    cursor: pointer;
+}
+.ml:hover{
+    color: blueviolet;
+}
+.footer-link{
+    color: yellow;
+    cursor: pointer
+
+}
+.footer-link:hover{
+    color: blueviolet;
+}
