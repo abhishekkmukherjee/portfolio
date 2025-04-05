@@ -1,17 +1,11 @@
 ## Print-friendly portfolio CV
 
 > [!TIP]
-> 〔🌐〕[Take a look](https://www.arielfalcon.me)
+> 〔🌐〕[Take a look](#)
 <p align = "center">
     <img src="public/astro-vim.png" alt="logo" width="200"/>
 </p>
 
-## 〔ℹ〕 About
-
-This project is refactored from the original [**dev-portfolio**](https://github.com/Smilesharks/dev-portfolio) project, thanks for his work.
-
-I also implemented and improved this neovim mode [**neovim-porfolio**](https://github.com/albertoperdomo2/astro-vim)
-![](public/demo.gif)
 
 ## 🛠️ Stack
 
@@ -24,8 +18,7 @@ I also implemented and improved this neovim mode [**neovim-porfolio**](https://g
 
 ## 🚀 Getting Started
 
-### 0. One-click to deploy on Vercel
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/ArielFalcon/portfolio&project-name=portfolio&repository-name=portfolio)
+
 
 Modify the `cv.json` file to create your own printable Portfolio/CV.
 
@@ -73,3 +66,5 @@ Change the data-theme of `cv.json` and choose one of the colour themes defined i
 | 📦 | `deploy:cloudflare`       | Deploy on Cloudflare, please run `wrangler login` first.                                           |                                |
 
 CV JSON schema from [**jsonresume.org**](https://jsonresume.org/schema/)
+summary: experienced in full stack development building high complexity applications in code and no code tools with a focus on performance, user experience, and system integration.
+

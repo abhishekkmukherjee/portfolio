@@ -8,11 +8,12 @@ import Projects from "@/components/sections/Projects.astro";
 import Skills from "@/components/sections/Skills.astro";
 import KeyboardManager from "@/components/KeyboardManager.astro";
 import ThemeSwitch from "@/components/ThemeSwitch.astro";
-
-import CV, { basics } from "@cv";
+import Extensions from "@/components/sections/Extensions.astro";
 import Education from "@/components/sections/Education.astro";
 import NeovimButton from "../components/neovim/Button.astro";
-const { name} = basics;
+
+import CV, { basics } from "@cv";
+const { name } = basics;
 ---
 
 <Layout title={`${name} - Portfolio`}>
@@ -31,15 +32,10 @@ const { name} = basics;
       class="slide-enter-content space-y-12 md:col-span-4 print:col-span-1 print:grid print:grid-cols-4 print:gap-2 print:space-y-0"
     >
       <Experience className="print:col-span-3" />
-      {
-          (
-          <>
-            <Projects className="print:hidden" />
-            {CV?.education && <Education className="order-first" />}
-            <Skills className="print:hidden" />
-          </>
-        )
-      }
+      <Projects className="print:hidden" />
+      {CV?.education && <Education className="order-first" />}
+      <Skills className="print:hidden" />
+      <Extensions className="print:hidden" />
     </div>
   </main>
   <KeyboardManager />

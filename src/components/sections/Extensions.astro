@@ -1,0 +1,52 @@
+---
+import type { CV } from "@cv";
+import CV, { basics } from "@cv";
+import { Icon } from "astro-icon/components";
+import Section from '../Section.astro';
+
+interface Props {
+  className?: string;
+}
+
+const { className } = Astro.props;
+const { extensions } = CV;
+---
+
+<Section title="Extensions" className={className}>
+  <div class="space-y-4">
+    {extensions && extensions.map((extension) => (
+      <div class="rounded-lg border border-skin-line bg-skin-card p-4">
+        <div class="flex items-center gap-2">
+          <Icon name={extension.stack[Object.keys(extension.stack)[0]]} class="h-6 w-6" />
+          <h3 class="text-xl font-semibold">{extension.name}</h3>
+        </div>
+        <p class="mt-2 text-skin-muted">{extension.description}</p>
+        {extension.highlights && extension.highlights.length > 0 && (
+          <div class="mt-4 flex flex-wrap gap-2">
+            {extension.highlights.map((highlight) => (
+              <span class="rounded-full bg-skin-accent px-3 py-1 text-sm text-skin-accent">
+                {highlight}
+              </span>
+            ))}
+          </div>
+        )}
+        {extension.stack && Object.keys(extension.stack).length > 0 && (
+          <div class="mt-4 flex flex-wrap gap-2">
+            {Object.entries(extension.stack).map(([name, icon]) => (
+              <span class="flex items-center gap-1 rounded-full bg-skin-accent px-3 py-1 text-sm text-skin-accent">
+                <Icon name={icon} class="h-5 w-5" />
+                {name}
+              </span>
+            ))}
+          </div>
+        )}
+        {extension.url && (
+          <a href={extension.url} target="_blank" rel="noopener noreferrer" class="mt-4 inline-flex items-center gap-1 text-sm text-skin-hue hover:underline">
+            View Extension
+            <Icon name="ri:arrow-right-line" class="h-5 w-5" />
+          </a>
+        )}
+      </div>
+    ))}
+  </div>
+</Section> 

@@ -2,13 +2,13 @@
 import Section from "../Section.astro";
 import { Icon } from "astro-icon/components";
 
-import { projects } from "@cv";
+import { personal_projects } from "@cv";
 ---
 
 <Section className={Astro.props.className} title="Projects">
   <div class="grid grid-cols-1 gap-3 md:grid-cols-2 print:flex print:flex-col">
     {
-      projects && projects.map(
+      personal_projects && personal_projects.map(
         ({ url, description, highlights, name, isActive, github, stack }) => {
           return (
             <div
