@@ -17,5 +17,7 @@ export default defineConfig({
       },
     })
   ],
-  output: "static"
+  output: "static",
+  site: "https://abhishekkmukherjee.github.io",
+  base: "/portfolio"
 });
