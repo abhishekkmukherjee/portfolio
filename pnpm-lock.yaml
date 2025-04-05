@@ -11,15 +11,9 @@ importers:
       '@astrojs/markdown-remark':
         specifier: ^5.1.1
         version: 5.2.0
-      '@astrojs/mdx':
-        specifier: ^3.1.2
-        version: 3.1.9(astro@4.15.11(@types/node@22.7.4)(lightningcss@1.25.1)(rollup@4.24.0)(terser@5.31.3)(typescript@5.6.2))
       '@astrojs/tailwind':
         specifier: ^5.1.1
         version: 5.1.1(astro@4.15.11(@types/node@22.7.4)(lightningcss@1.25.1)(rollup@4.24.0)(terser@5.31.3)(typescript@5.6.2))(tailwindcss@3.4.13)
-      '@astrojs/vercel':
-        specifier: ^7.8.1
-        version: 7.8.1(astro@4.15.11(@types/node@22.7.4)(lightningcss@1.25.1)(rollup@4.24.0)(terser@5.31.3)(typescript@5.6.2))(react@19.1.0)
       '@fancyapps/ui':
         specifier: ^5.0.36
         version: 5.0.36
@@ -69,6 +63,12 @@ importers:
       '@astrojs/check':
         specifier: ^0.9.4
         version: 0.9.4(prettier-plugin-astro@0.14.1)(prettier@3.3.3)(typescript@5.6.2)
+      '@astrojs/mdx':
+        specifier: ^3.1.9
+        version: 3.1.9(astro@4.15.11(@types/node@22.7.4)(lightningcss@1.25.1)(rollup@4.24.0)(terser@5.31.3)(typescript@5.6.2))
+      '@astrojs/vercel':
+        specifier: ^7.8.1
+        version: 7.8.1(astro@4.15.11(@types/node@22.7.4)(lightningcss@1.25.1)(rollup@4.24.0)(terser@5.31.3)(typescript@5.6.2))(react@19.1.0)
       daisyui:
         specifier: ^4.12.10
         version: 4.12.23(postcss@8.4.47)
