@@ -7,6 +7,12 @@ const millisecondsInYear = 1000 * 60 * 60 * 24 * 365
 const millisecondsInMonth = 1000 * 60 * 60 * 24 * 30
 ---
 
+interface ProjectItem {
+  name: string;
+  url?: string;
+  description?: string;
+}
+
 <Section className={Astro.props.className} title="Experience">
   <ul class="flex flex-col">
     {work.map(({ name, startDate, endDate, position, summary, highlights, projects_and_contributions, responsibilities, achievements, url, skills, location, location_type }) => {
@@ -88,44 +94,33 @@ const millisecondsInMonth = 1000 * 60 * 60 * 24 * 30
             <div class="flex flex-col gap-1">
               <h4 data-ccursor="lift">Projects & Contributions:</h4>
               <ul class="text-skin-muted [&>li]:ml-4 flex list-disc flex-col gap-2">
-                {projects_and_contributions.map(project => {
-                  if (typeof project === 'string') {
-                    return <li data-ccursor>{project}</li>;
-                  }
-                  if (project.items) {
-                    return (
-                      <li data-ccursor>
-                        <span class="font-semibold">{project.name}:</span>
-                        <ul class="ml-4 mt-1">
-                          {project.items.map(item => (
-                            <li>
-                              {item.url ? (
-                                <a href={item.url} target="_blank" rel="noopener noreferrer" class="hover:text-skin-hue">
-                                  {item.name}
-                                </a>
-                              ) : (
-                                <span>{item.name}</span>
-                              )}
-                              {item.description && <span class="text-skin-muted"> - {item.description}</span>}
-                            </li>
-                          ))}
-                        </ul>
-                      </li>
-                    );
-                  }
-                  return (
-                    <li data-ccursor>
-                      {project.url ? (
-                        <a href={project.url} target="_blank" rel="noopener noreferrer" class="hover:text-skin-hue">
-                          {project.name}
-                        </a>
-                      ) : (
-                        <span>{project.name}</span>
-                      )}
-                      {project.description && <span class="text-skin-muted"> - {project.description}</span>}
-                    </li>
-                  );
-                })}
+                {projects_and_contributions.map((project) => (
+                  <div>
+                    <h4 class="font-medium">{project.name}</h4>
+                    {project.description && <p class="text-skin-muted">{project.description}</p>}
+                    {project.url && (
+                      <a href={project.url} target="_blank" rel="noopener noreferrer" class="text-skin-accent hover:text-skin-accent-hover">
+                        View Project
+                      </a>
+                    )}
+                    {project.items && (
+                      <ul class="list-disc list-inside space-y-1 mt-2">
+                        {project.items.map((item: ProjectItem) => (
+                          <li>
+                            {item.url ? (
+                              <a href={item.url} target="_blank" rel="noopener noreferrer" class="hover:text-skin-hue">
+                                {item.name}
+                              </a>
+                            ) : (
+                              <span>{item.name}</span>
+                            )}
+                            {item.description && <span class="text-skin-muted"> - {item.description}</span>}
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                  </div>
+                ))}
               </ul>
             </div>
           )}
