@@ -3,15 +3,16 @@ import Section from '../Section.astro'
 import { work } from '@cv'
 import { Icon } from 'astro-icon/components'
 
-const millisecondsInYear = 1000 * 60 * 60 * 24 * 365
-const millisecondsInMonth = 1000 * 60 * 60 * 24 * 30
----
-
 interface ProjectItem {
   name: string;
   url?: string;
   description?: string;
+  items?: ProjectItem[];
 }
+
+const millisecondsInYear = 1000 * 60 * 60 * 24 * 365
+const millisecondsInMonth = 1000 * 60 * 60 * 24 * 30
+---
 
 <Section className={Astro.props.className} title="Experience">
   <ul class="flex flex-col">
